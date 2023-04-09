@@ -1,0 +1,31 @@
+# config.toml
+
+[AIO]
+username = "ntpt7921"
+key = "aio_kkuJ31gkhr6EXfG7UHxQWc4dBKWa"
+
+    [AIO.feed]
+        [AIO.feed.sensor1]
+        feed_id = "test-feed"
+        qos = 0
+        [AIO.feed.sensor2]
+        feed_id = "test-feed2"
+        qos = 0
+
+[UART]
+baudrate = 115200
+bytesize = 8
+parity = "N"
+stopbits = 1
+device_name_regex = [
+    'ft232.',
+    'cp210.',
+    'stlink',
+    'uart'
+]
+
+[TeachableMachine]
+path = "TeachableMachine"
+model_file = "keras_model.h5"
+label_file = "labels.txt"
+show_cam_feed = "True"
